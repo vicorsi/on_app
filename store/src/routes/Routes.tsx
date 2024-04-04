@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Welcome, Login, SignUp, Homepage } from '../export'
+import { Login, Welcome, SignUp, Homepage } from '../screens/export';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 export const Stack = createNativeStackNavigator();

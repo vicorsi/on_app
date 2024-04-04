@@ -19,7 +19,7 @@ export const Input: React.FC<InputProps> = ({label, typeInput, ...rest}) => {
 
 const styles = StyleSheet.create({
     containerInput: {
-        width: '90%',
+        width: '100%',
         height: 70,
         display: 'flex',
         flexDirection: 'column',

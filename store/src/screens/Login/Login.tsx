@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, StyleSheet, Text, KeyboardAvoidingView, StatusBar } from 'react-native'
-import { Button, Input } from '../../export';
+import { Button, Input } from '../../components/export';
 import {COLORS, SIZE} from '../../../constants';
 
 export const Login = ({navigation}: any) => {

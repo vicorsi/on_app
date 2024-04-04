@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: 20
     },
     spacingContainer: {
         width: '90%',
@@ -52,6 +53,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
+
     },
     logoText:{
         fontFamily: 'Koulen',

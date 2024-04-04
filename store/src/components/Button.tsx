@@ -16,7 +16,8 @@ export const Button: React.FC<ButtonProps> = ({ text, ...rest}) => {
 const styles = StyleSheet.create({
     button: {
       width: 312,
-      height: 55,
+      height: 58,
+      // padding: 17,
       backgroundColor: '#000',
       display: 'flex',
       justifyContent: 'center',

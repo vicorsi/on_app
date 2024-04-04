@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, StatusBar } from "react-native";
 import { COLORS, SIZE } from "../../../constants";
-import { Header } from "../../export";
+import { Header } from "../../components/export";
 
 export default function Homepage() {
     return (
