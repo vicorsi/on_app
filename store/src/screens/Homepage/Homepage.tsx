@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
     screen: {
         width: SIZE.width,
         height: SIZE.height,
-        backgroundColor: COLORS.principalOrange,
+        backgroundColor: COLORS.lightGrey,
         display: 'flex',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
+        // justifyContent: 'flex-end',
+        // alignItems: 'center',
         flex:1,
-        paddingTop: 5
+        // top: 0
     },
     principalContainer:{
         width: '100%',

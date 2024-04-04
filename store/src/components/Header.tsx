@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 20
+        top: 0
     },
     spacingContainer: {
         width: '90%',
