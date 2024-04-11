@@ -35,10 +35,16 @@ export default function Homepage() {
             <StatusBar backgroundColor={COLORS.black} animated={true} barStyle={"light-content"} />
             <Header/>
             <View style={styles.principalContainer}>
-                <TextInput style={{width: '90%', backgroundColor: '#f40'}}/>
-
-                <CategoryCard icon={<MaterialCommunityIcons name="tshirt-crew-outline" size={35} color="black" />} text="camisetas"/>
+                <TextInput style={styles.search}/>
+                <View style={styles.image}></View>
+                <View style={{width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+                    <CategoryCard icon={<MaterialCommunityIcons name="tshirt-crew-outline" size={35} color="black" />} text="camisetas"/>
+                    <CategoryCard icon={<MaterialCommunityIcons name="tshirt-crew-outline" size={35} color="black" />} text="calçados"/>
+                    <CategoryCard icon={<MaterialCommunityIcons name="tshirt-crew-outline" size={35} color="black" />} text="bolsas"/>
+                </View>
+               
             </View>
+
         </View>
     )
 }
@@ -50,19 +56,32 @@ const styles = StyleSheet.create({
         minHeight: SIZE.height,
         backgroundColor: COLORS.lightGrey1,
         display: 'flex',
-        // justifyContent: 'flex-end',
-        // alignItems: 'center',
         flex:1,
-        // top: 0
     },
     principalContainer:{
         backgroundColor: '#f80',
         width: '100%',
-        height: '96%',
+        height: '100%',
         display: 'flex',
-        alignItems: 'center'
-
-
+        alignItems: 'center',
+        padding: 20,
+        gap: 35
+    },
+    search: {
+        width: '85%',
+        height: 36,
+        backgroundColor: COLORS.lightGrey1,
+        borderWidth: 1,
+        borderRadius: 7,
+        borderColor: COLORS.lightGrey3
+    },
+    image: {
+        width: '93%',
+        height: 306,
+        borderWidth: 1,
+        borderRadius: 5,
+        borderColor: COLORS.lightGrey3,
+        backgroundColor: COLORS.lightGrey1
     }
     
 })
