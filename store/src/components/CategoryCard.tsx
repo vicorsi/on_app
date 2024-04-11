@@ -1,37 +1,66 @@
 import React from 'react'
-import { Pressable, PressableProps, StyleSheet, Text, View } from 'react-native';
-
-interface CategoryCardProps extends PressableProps{
-    icon: React.ReactNode
-    text: string
-}
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { CategoryCardProps } from '../interfaces';
+import { COLORS } from '../../constants';
+import * as Font from 'expo-font';
+import { useState, useEffect } from "react";
 
 export const CategoryCard: React.FC<CategoryCardProps> = ({ text, icon,...rest}) => {
+
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const loadFonts = async () => {
+    try {
+      await Font.loadAsync({
+        'PoppinsRegular': require('../assets/Fonts/Poppins/Poppins-Regular.ttf'),
+      });
+      setFontsLoaded(true);
+    } catch (error) {
+      console.error('Erro ao carregar fontes:', error);
+    }
+  };
+
+  useEffect(() => {
+    loadFonts();
+  }, []);
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
-    <View >
+    <View style={styles.containerCategoryCard}>
         <Pressable style={styles.button} {...rest}>
-            {icon}
+          <Text>{icon}</Text>
         </Pressable>
-        <Text>{text}</Text>
+        <Text  style={{fontFamily: 'PoppinsRegular', fontSize: 13}}>{text}</Text>
     </View>
-    
   )
 }
 
 const styles = StyleSheet.create({
     button: {
-      width: 312,
-      height: 55,
-      backgroundColor: '#000',
+      width: 95,
+      height: 80,
+      backgroundColor: COLORS.lightGrey2,
       display: 'flex',
       justifyContent: 'center',
       alignItems:'center',
       borderRadius: 8,
+      borderWidth: 1,
+      borderColor: COLORS.lightGrey3,
+      marginBottom: 3
     },
     textButton: {
       fontSize: 20,
       fontWeight: 'bold',
       color: 'white'
     },
+    containerCategoryCard: {
+      width: 'auto',
+      height: 'auto',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
   });
   
