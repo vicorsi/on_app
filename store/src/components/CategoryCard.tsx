@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
       borderRadius: 8,
       borderWidth: 1,
       borderColor: COLORS.lightGrey3,
-      marginBottom: 3
+      marginBottom: 6
     },
     textButton: {
       fontSize: 20,
