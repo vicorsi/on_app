@@ -1,4 +1,4 @@
-import { View, StyleSheet, Dimensions, Text, Pressable } from 'react-native'
+import { View, StyleSheet, Text, Pressable } from 'react-native'
 import {COLORS, SIZE} from '../../../constants';
 import React, { useState, useEffect } from 'react'
 import * as Font from 'expo-font';
