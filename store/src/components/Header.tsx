@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Pressable, StatusBar } from "react-native";
 import { COLORS } from "../../constants";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { useEffect, useState } from "react";
@@ -27,10 +27,15 @@ export default function Header() {
 
     return (
         <View style={styles.container}>
+            <StatusBar backgroundColor={COLORS.principalOrange} animated={true} />
             <View style={styles.spacingContainer}>
-                <Icon name="menu" size={25} color="white" />
+                <Pressable style={styles.pressable}>
+                    <Icon name="menu" size={20} color="white" />
+                </Pressable>
                 <Text style={styles.logoText}>STYLE ON</Text>
-                <Icon name="cart-outline" size={25} color="white" />
+                <Pressable>
+                    <Icon name="cart-outline" size={20} color="white" />
+                </Pressable>
             </View>
         </View>
     )
@@ -40,14 +45,14 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         backgroundColor: COLORS.black,
-        height: '6%',
+        height: '7%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         top: 0
     },
     spacingContainer: {
-        width: '90%',
+        width: '85%',
         height: '90%',
         backgroundColor: COLORS.black,
         justifyContent: 'space-between',
@@ -57,8 +62,13 @@ const styles = StyleSheet.create({
     },
     logoText:{
         fontFamily: 'Koulen',
-        fontSize: 30,
-        color: COLORS.principalOrange
+        fontSize: 32,
+        color: COLORS.principalOrange,
+        letterSpacing: 2
+    },
+    pressable:{
+        width: 'auto',
+        height: 'auto'
     }
 
 })
