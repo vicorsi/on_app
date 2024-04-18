@@ -29,9 +29,6 @@ export default function Header() {
         <View style={styles.container}>
             <StatusBar backgroundColor={COLORS.principalOrange} animated={true} />
             <View style={styles.spacingContainer}>
-                <Pressable style={styles.pressable}>
-                    <Icon name="menu" size={20} color="white" />
-                </Pressable>
                 <Text style={styles.logoText}>STYLE ON</Text>
                 <Pressable>
                     <Icon name="cart-outline" size={20} color="white" />
@@ -52,7 +49,7 @@ const styles = StyleSheet.create({
         top: 0
     },
     spacingContainer: {
-        width: '85%',
+        width: '75%',
         height: '90%',
         backgroundColor: COLORS.black,
         justifyContent: 'space-between',
@@ -62,7 +59,7 @@ const styles = StyleSheet.create({
     },
     logoText:{
         fontFamily: 'Koulen',
-        fontSize: 32,
+        fontSize: 34,
         color: COLORS.principalOrange,
         letterSpacing: 2
     },
