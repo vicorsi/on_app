@@ -11,11 +11,7 @@ import { SignUp } from "./src/screens/SignUp/SignUp";
 export{
     Button,
     Input,
-    OrderTypeCard
-}
-
-// screens
-export{
+    OrderTypeCard,
     Welcome,
     Login,
     SignUp
