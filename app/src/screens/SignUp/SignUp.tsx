@@ -45,12 +45,13 @@ const styles = StyleSheet.create({
   container:{
       width: '100%',
       height: '82%',
-      backgroundColor: COLORS.lightGrey,
+      backgroundColor: COLORS.lightGrey1,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
+      paddingBottom: 25
   },
   formContainer:{
     width: '90%',

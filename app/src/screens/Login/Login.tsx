@@ -17,7 +17,7 @@ export const Login = ({navigation}: any) => {
               <Text style={{color: '#000'}}>Esqueceu a senha?</Text>
             </View>
           </View>
-          <Button text='Login' onPress={() => {navigation.navigate('SignUp')}}/>
+          <Button text='Login' onPress={() => {navigation.navigate('Home')}}/>
         </View>
       </View>
     </View>
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   container:{
     width: '100%',
     height: '70%',
-    backgroundColor: COLORS.lightGrey,
+    backgroundColor: COLORS.lightGrey1,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

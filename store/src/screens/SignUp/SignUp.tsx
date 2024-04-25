@@ -28,10 +28,7 @@ export default function SignUp({navigation}: any) {
                     <Input label='Número' />
                   </View>
                 </View>
-                
-
             </View>
-
             <View style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
               <Button text='Cadastrar' onPress={() => navigation.navigate('Homepage')} />
             </View>
