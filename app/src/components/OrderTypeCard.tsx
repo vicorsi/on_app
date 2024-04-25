@@ -1,9 +1,10 @@
 import React from 'react'
 import { PressableProps, StyleSheet, Text, View } from 'react-native';
 import Material from 'react-native-vector-icons/MaterialIcons'
+import { COLORS } from '../../constants';
 
 interface CardOrders extends PressableProps{
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
     text: string;
 }
 
@@ -20,16 +21,16 @@ export const OrderTypeCard: React.FC<CardOrders> = ({icon, text}: CardOrders) =>
 const styles = StyleSheet.create({
     containerOrders: {
         width: 313,
-        height: 100,
+        height: 110,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems:'center',
         paddingHorizontal: 30,
-        backgroundColor: '#F0F0F0',
+        backgroundColor: COLORS.lightGrey2,
         borderWidth: 1,
         borderRadius: 10,
-        borderColor: '#C7C7C7',
+        borderColor: COLORS.lightGrey3,
         padding: 3,
     },
     text: {
