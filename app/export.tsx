@@ -6,6 +6,7 @@ import { OrderTypeCard } from "./src/components/OrderTypeCard";
 import Welcome from "./src/screens/Welcome/Welcome";
 import { Login } from "./src/screens/Login/Login";
 import { SignUp } from "./src/screens/SignUp/SignUp";
+import { Homepage } from "./src/screens/Homepage/Homepage";
 
 // components
 export{
@@ -14,5 +15,6 @@ export{
     OrderTypeCard,
     Welcome,
     Login,
-    SignUp
+    SignUp,
+    Homepage
 }
