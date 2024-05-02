@@ -3,11 +3,13 @@ import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
 
 export interface ButtonProps extends PressableProps{
     text: string;
+    // onPress: () => void;
 }
 
 export interface InputProps extends TextInputProps{
     label: string;
     typeInput?: boolean;
+    // onChange: () => void;
 }
 
 

@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, TextInput, TextInputProps, View } from 'react-native';
 import { InputProps } from '../interfaces'
 
-
 export const Input: React.FC<InputProps> = ({label, typeInput, ...rest}) => {
+  const [text, setText] = useState(""); 
+
   return (
     <View style={styles.containerInput} {...rest}>
         <Text style={styles.label}>{label}</Text>
-        <TextInput style={styles.input} cursorColor='#000' secureTextEntry={typeInput} ></TextInput>
+        <TextInput 
+          style={styles.input} 
+          cursorColor='#000' 
+          secureTextEntry={typeInput} 
+          onChangeText={setText}
+          value={text} 
+        ></TextInput>
     </View>
   )
 }

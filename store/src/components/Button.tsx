@@ -1,8 +1,8 @@
 import React from 'react'
-import { Pressable, PressableProps, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet, Text } from 'react-native';
 import { ButtonProps } from '../interfaces';
 
-export const Button: React.FC<ButtonProps> = ({ text, ...rest}) => {
+export const Button: React.FC<ButtonProps> = ({ text, ...rest}: ButtonProps) => {
   return (
     <Pressable style={styles.button} {...rest}>
         <Text style={styles.textButton}>{text}</Text>
