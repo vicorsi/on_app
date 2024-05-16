@@ -12,7 +12,7 @@ export const Login = () => {
   const SignIn = async () => {
     try {
       console.log("oi, entrei");
-      const response = await api.post("token/", {
+      const response = await api.post("auth/token/", {
         email: email,
         password: password,
       }, {

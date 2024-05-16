@@ -1,9 +1,31 @@
-import React from 'react'
-import { View, StyleSheet, Dimensions, Text, Pressable, KeyboardAvoidingView, Platform, StatusBar } from 'react-native'
+import React, {useState} from 'react'
+import { View, StyleSheet, Dimensions, Text, Pressable, KeyboardAvoidingView, Platform, StatusBar, TextInput } from 'react-native'
 import { Button, Input } from '../../../export';
 import {COLORS, SIZE} from '../../../constants';
+import api, { headers } from '../../api/Api';
 
 export const Login = ({navigation}: any) => {
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const SignIn = async () => {
+    
+    try {
+      const response = await api.post("auth/token/login/", {
+        email: email,
+        password: password,
+      }, {
+        headers: headers
+      });
+      if(response.status == 200){
+        navigation.navigate('Welcome')
+      }
+    } catch(error) {
+      console.log(error);
+    }
+  };
+
   return (
     <KeyboardAvoidingView behavior='padding' style={{flex: 1}} >
     <StatusBar backgroundColor={COLORS.principalOrange} animated={true}/>
@@ -11,13 +33,13 @@ export const Login = ({navigation}: any) => {
       <View style={styles.container}>
         <View style={styles.formContainer}>
           <View style={{display: 'flex', flexDirection: 'column', gap: 20, width: '100%', alignItems: 'center', height: '50%'}} >
-            <Input label='E-mail'/>
-            <Input label='Senha' typeInput={true}/>
+          <TextInput style={{ width:350, padding:12, borderWidth:1}} placeholder='Email:' onChangeText={(text) => setEmail(text)} />
+            <TextInput style={{ width:350, padding:12, borderWidth:1}} placeholder='Senha:'  onChangeText={(text) => setPassword(text)} />
             <View style={{display: 'flex', alignItems: 'flex-end', width: '90%'}}>
               <Text style={{color: '#000'}}>Esqueceu a senha?</Text>
             </View>
           </View>
-          <Button text='Login' onPress={() => {navigation.navigate('SignUp')}}/>
+          <Button text='Login' onPress={() => {SignIn()}}/>
         </View>
       </View>
     </View>
